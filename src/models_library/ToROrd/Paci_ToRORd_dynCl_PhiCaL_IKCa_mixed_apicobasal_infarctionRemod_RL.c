@@ -51,6 +51,7 @@ SET_ODE_INITIAL_CONDITIONS_CPU(set_model_initial_conditions_cpu) {
         int infarct_zone = (int) extra_data[i + (2*num_cells)];
         real *sv = &solver->sv[i * NEQ];
 
+        //Change to alternative Steady State files provided in this directory if using the D0 or D14 models from Riebel et al., Stem Cell Reports, 2026
         #include "Paci_ToRORd_dynCl_PhiCaL_IKCa_mixed_apicobasal_infarctionRemod_SteadyState.common.c"
         if(is_paci > 0) {
             sv[0] = v;             // V;         millivolt
@@ -664,7 +665,7 @@ void RHS_cpu(real *a_, real *b_, const real *sv, real *rDY, real stim_current, r
     real atrial_Irel = 0.0943;
     real atrial_Ileak = 0.1118;
 
-    //Applied to the nodal-like iPSC-CMs (i.e. is_paci = 2)
+    //Applied to the nodal-like iPSC-CMs (i.e. is_paci = 3)
     real nodal_INa = 1.1739;
     real nodal_INaL = 1.8433;
     real nodal_Ito = 2.2774;
