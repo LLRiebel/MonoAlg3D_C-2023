@@ -810,11 +810,17 @@ if (is_paci == 0) {
     //Available at: www.mcbeng.it/en/category/software.html
     //
     //TODO: Copy Paci model here 
-    //Include scaling factors as defined in the bottom of the Paci_ToRORd .c and .cu files in the form of if(is_paci==2){g_x = g_x * atrial_x;} else if(is_paci==3) {g_x = g_x * nodal_x;}
     //Convert units from V to mV, s to ms, m to cm, S/F to nS/pF, F to pF, and C/mol to C/mmol
     //Define rDY[x] = , a_[x], and b_[x] as (x_inf - x) / tau_x, -1 / tau_x, and x_inf / tau_inf for all gating variables (Rush-Larsen method)
     //DO NOT COPY AND PASTE "Stimulation" paragraph
     //Change "-i_stim" to "+stim_current"
+    //
+    //For Riebel et al., Scientific Reports, 2024:
+    //Include scaling factors as defined in the bottom of the Paci_ToRORd .c and .cu files in the form of if(is_paci==2){g_x = g_x * atrial_x;} else if(is_paci==3) {g_x = g_x * nodal_x;}
+    //
+    //For Riebel et al., Stem Cell Reports, 2026:
+    //Include relevant scaling factors as defined in the paper's supplementary material, Table S5
+    //Change SteadyState files in the Paci_ToRORd .c and .cu files to the relevant file provided in this directory (e.g., D14 or Rapid D0 steady states)
     //
     //To test correct implementation, a test case initilisation file and single-cube-mesh are available in this repository
 }
