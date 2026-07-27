@@ -73,6 +73,9 @@ Among others.
 
 # How to cite:
 
+For the updates made in Riebel et al., 2026:
+Riebel LL, Wang, ZJ, Zhou, X, Berg LA, Trovato, C, Rodriguez B. In silico optimization of regenerative cell therapy in the infarcted human ventricles to mitigate arrhythmic burden. Stem Cell Rep (2026). https://doi.org/10.1016/j.stemcr.2026.103007
+
 For the updates made in Riebel et al., 2024:
 Riebel LL, Wang, ZJ, Martinez-Navarro H, Trovato C, Camps J, Berg LA, Zhou X, Doste R, Sachetto Oliveira, R Weber dos Santos R, Biasetti J, Rodriguez B. In Silico Evaluation of Cell Therapy in Acute versus Chronic Infarction: Role of Automaticity, Heterogeneity and Purkinje in Human. Sci Rep, 14 21584 (2024). https://doi.org/10.1038/s41598-024-67951-5
 
