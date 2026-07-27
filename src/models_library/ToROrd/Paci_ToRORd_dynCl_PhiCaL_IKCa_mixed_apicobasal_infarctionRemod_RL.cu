@@ -107,6 +107,7 @@ __global__ void kernel_set_model_initial_conditions(real *sv, int num_volumes, s
     int infarct_stage = (int) extra_data[5 * num_volumes];
 
     if (thread_id < num_volumes) {
+		//Change to alternative Steady State files provided in this directory if using the D0 or D14 models from Riebel et al., Stem Cell Reports, 2026
         #include "Paci_ToRORd_dynCl_PhiCaL_IKCa_mixed_apicobasal_infarctionRemod_SteadyState.common.c"
         if (is_paci > 0) {
             *((real * )((char *) sv + pitch * 0) + thread_id)  = v;             // mV;         millivolt
@@ -702,7 +703,7 @@ inline __device__ void RHS_gpu(real *a_, real *b_, real *sv, real *rDY, real sti
     real atrial_Irel = 0.0943;
     real atrial_Ileak = 0.1118;
 
-    //Applied to the nodal-like iPSC-CMs (i.e. is_paci = 2)
+    //Applied to the nodal-like iPSC-CMs (i.e. is_paci = 3)
     real nodal_INa = 1.1739;
     real nodal_INaL = 1.8433;
     real nodal_Ito = 2.2774;
